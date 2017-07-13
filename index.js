@@ -1,9 +1,11 @@
 var express = require('express');
+var app = express();
 var request = require('request');
 var cheerio = require('cheerio');
 var path = require('path');
+var server = require('http').createServer(app);
+var io = require('socket.io').listen(server);
 
-var app = express();
 
 var port = process.env.PORT || 8080;
 
